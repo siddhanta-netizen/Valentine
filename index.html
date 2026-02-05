@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Will You Be My Valentine? 💕</title>
+
+  <!-- Cute Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Baloo 2', cursive;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #ffd6e7, #ffeaf3, #fff6fb);
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* MOBILE ONLY WIDTH */
+    /* RESPONSIVE CONTAINER – ADAPTS TO DEVICE */
+    /* RESPONSIVE MAIN CONTAINER – MOBILE + DESKTOP */
+    .phone {
+      width: 100%;
+      max-width: 1100px; /* desktop friendly */
+      min-height: 100vh;
+      padding: clamp(16px, 3vw, 40px);
+      text-align: center;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      gap: clamp(12px, 3vh, 24px);
+    }
+
+    /* DESKTOP LAYOUT */
+    @media (min-width: 768px) {
+      .phone {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+      }
+
+      h1, .subtitle {
+      font-size: clamp(14px, 3vw, 20px);
+      color: #444;
+    }
+
+      .story {
+      font-size: clamp(14px, 2.5vw, 18px);
+      color: #333;
+      line-height: 1.6;
+    }
+
+      .buttons {
+      position: relative;
+      width: 100%;
+      height: clamp(120px, 20vh, 200px);
+    }
+    }
+
+    h1 {
+      font-size: clamp(24px, 5vw, 42px);
+      color: #ff3e88;
+      animation: pop 1s infinite alternate;
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      font-size: 16px;
+      color: #444;
+    }
+
+    /* CARTOON CHARACTERS */
+    .characters {
+      font-size: clamp(60px, 10vw, 120px);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .story {
+      font-size: clamp(14px, 4vw, 16px);
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-size: clamp(18px, 3.5vw, 26px);
+      font-weight: bold;
+      color: #ff0077;
+    }
+
+    .buttons {
+      position: relative;
+      height: clamp(100px, 20vh, 140px);
+    }
+
+    button {
+      padding: clamp(10px, 3vw, 14px) clamp(18px, 6vw, 26px);
+      font-size: clamp(14px, 4vw, 18px);
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      transition: 0.25s;
+      touch-action: manipulation;
+    }
+
+    #yesBtn {
+      background: #ff4fa3;
+      color: white;
+      left: 20%;
+      box-shadow: 0 8px 18px rgba(255, 0, 120, 0.3);
+    }
+
+    #yesBtn:active {
+      transform: scale(1.1);
+    }
+
+    #noBtn {
+      background: #ddd;
+      color: #333;
+      right: 20%;
+    }
+
+    /* HEARTS */
+    .heart {
+      position: absolute;
+      color: #ff4fa3;
+      animation: rise 3s linear infinite;
+      font-size: 20px;
+    }
+
+    @keyframes rise {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    /* SUCCESS SCREEN */
+    .success {
+      position: absolute;
+      inset: 0;
+      background: #fff0f7;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .success h2 {
+      color: #ff2e7a;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .celebrate {
+      font-size: 70px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="phone">
+
+    <h1>Hey You 💕</h1>
+    <div class="subtitle">तिमी मुस्कुराउँदा मेरो दिन राम्रो हुन्छ 😊</div>
+
+    <div class="characters">(≧◡≦) ♡ (｡♥‿♥｡)</div>
+
+    <!--<div class="story">
+      Hami dherai time dekhi sathi jastai kura gardai, hasdai, jiskidai aayau 😊<br>
+      timro ek smile le mero pura din ramailo huncha, timro message aauda mutu fast-fast dhadkincha 💓<br>
+      chai date, late night chat, sano sano yaad haru le life nai cute banai diyeko cha ☕🌙<br>
+      sachchai bhannu parda… ma ali ali hoina, dherai nai timilai man parna thalechu ❤️<br>
+      tesaile aaja yo sano surprise page banayera sodhna aayeko… will you be mine? 💕
+    </div>-->
+
+    <div class="question">
+      Will you be my Valentine? 💘<br>
+      <small>के तिमी मेरो Valentine बन्छौ? 💕</small>
+    </div>
+
+    <div class="buttons">
+      <button id="yesBtn">Yes 💖 / हुन्छ</button>
+      <button id="noBtn">No 🙈 / नाइ</button>
+    </div>
+
+    <div class="success" id="success">
+      <div class="celebrate">💖✨🎉</div>
+      <h2>Yayyyyy!!!</h2>
+      <p>
+        You just made my heart super happy 😍<br>
+        अब तिमी मेरो official Valentine हो 💕<br>
+        चिया मेरो तर्फबाट 😄☕
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const success = document.getElementById('success');
+
+    // YES CLICK
+    yesBtn.onclick = () => {
+      success.style.display = 'flex';
+      createHearts();
+    };
+
+    // FUNNY RUNNING NO BUTTON
+    noBtn.onmouseover = moveButton;
+    noBtn.onclick = moveButton;
+
+    function moveButton() {
+      const container = document.querySelector('.buttons');
+      const maxX = container.clientWidth - noBtn.offsetWidth;
+      const maxY = container.clientHeight - noBtn.offsetHeight;
+
+      const x = Math.max(0, Math.random() * maxX);
+      const y = Math.max(0, Math.random() * maxY);
+
+      noBtn.style.left = x + 'px';
+      noBtn.style.top = y + 'px';
+
+      // Funny cute messages instead of only "Try Again"
+      const messages = [
+        "Nope 😢",
+        "Are you sure? 🥺",
+        "Think again 😞",
+        "गल्ती भयो 😭",
+        "पक्का नाइ? 🥹",
+        "Hehe catch me! 😔🏃",
+        "Don’t break my heart 💔😢",
+        "Pleaseeee 🥺💔",
+        "Chance देऊ ना 😭💕",
+        "Too slow 😞",
+        "Mission failed 😢🤣",
+        "Button bhaagyo 😭🏃",
+        "Aaja hoina bholi? 🥺",
+        "Tap garna sakdainau 😔",
+        "Maya bata bhagdaichu 😭",
+        "Oho almost! 😢",
+        "System error 404: No not found 😭",
+        "Yes matrai thichnu 🥹",
+        "La la pakrau na 😭",
+        "Timro luck slow cha 😞",
+        "No disabled by love 💔🥺",
+        "Bichara try again 😭",
+        "Heart royo 😢💔",
+        "Mero mutu dukyo 🥺💔"
+      ];
+
+      const randomText = messages[Math.floor(Math.random() * messages.length)];
+      noBtn.innerText = randomText;
+    }
+
+    // FLOATING HEARTS
+    function createHearts() {
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerText = '💗';
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 3000);
+      }, 200);
+    }
+  </script>
+
+</body>
+</html>
